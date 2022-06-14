@@ -1,0 +1,13 @@
+node_modules/
+build/
+*.rar
+#Hardhat files
+cache
+.idea
+.env
+.vscode
+.openzeppelin
+
+typechain
+typechain-types
+artifacts 
