@@ -12,7 +12,7 @@ const pk = process.env.PK;
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  defaultNetwork: "rinkeby",
+  defaultNetwork: "ropsten",
   networks: {
     localhost: {
       url: "http://127.0.0.1:8545"
@@ -30,6 +30,13 @@ module.exports = {
       gas: 8500000,
       gasPrice: 3000000000,
       chainId: 4,
+      accounts: [pk]
+    },
+    ropsten: {
+      url: 'https://speedy-nodes-nyc.moralis.io/b6a2f439eeb57f2c3c4334a6/eth/ropsten',      
+      gas: 8500000,
+      gasPrice: 3000000000,
+      chainId: 3,
       accounts: [pk]
     }
   },
