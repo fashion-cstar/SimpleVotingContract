@@ -49,7 +49,8 @@ contract VotingFactory is AccessControl{
         _grantRole(DEFAULT_ADMIN_ROLE, address(_address));
     }
 
-    function newVotingPoll(string memory _title, string[] memory _options) public onlyAdmin {        
+    // function newVotingPoll(string memory _title, string[] memory _options) public onlyAdmin {
+    function newVotingPoll(string memory _title, string[] memory _options) public {
         address pollAddress = address(new VotingPoll(msg.sender, _title, _options, votingPollsList.length));
         votingPollsList.push(
             PollInfo({
